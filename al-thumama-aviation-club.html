@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Al Thumama Aviation Club - Architecture Project by Omair Al-Qahtani">
+    <meta name="theme-color" content="#0f0f0f">
+    <title>Al Thumama Aviation Club | Omair Al-Qahtani</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="src/output.css">
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Framer Motion -->
+    <script src="https://unpkg.com/motion@10.16.4/dist/motion.js" defer></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[#0f0f0f] text-white font-['Inter'] overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 lg:px-20 border-b border-white/5 bg-[#0f0f0f]/80 backdrop-blur-md" id="navbar">
+        <div class="flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3" aria-label="Home">
+                <img src="src/projects/Logo.png" alt="Omair Logo" class="h-12 w-auto object-contain" style="filter: invert(1);">
+            </a>
+            <div class="flex items-center gap-8">
+                <a href="index.html#work" class="text-sm text-white/70 hover:text-white transition-colors duration-300">Back to Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="relative pt-32 pb-20 px-6 md:px-12 lg:px-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-12" id="project-header">
+                    <span class="text-sm text-white/40 uppercase tracking-[0.2em] mb-4 block">University Project | 2023</span>
+                    <h1 class="font-['Space_Grotesk'] text-4xl md:text-6xl lg:text-8xl font-bold mb-6 italic leading-none">
+                        Al Thumama<br><span class="text-white/20">Aviation Club</span>
+                    </h1>
+                </div>
+
+                <div class="aspect-video w-full overflow-hidden rounded-3xl mb-12">
+                    <img src="src/projects/Al Thumama Aviation Club.png" alt="Al Thumama Aviation Club Render" class="w-full h-full object-cover">
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                    <div class="lg:col-span-8">
+                        <h2 class="font-['Space_Grotesk'] text-2xl md:text-3xl font-semibold mb-6">Design Philosophy</h2>
+                        <div class="space-y-6 text-white/60 leading-relaxed text-lg">
+                            <p>
+                                The Al Thumama Aviation Club project represents a harmonious blend of aeronautical function and architectural form. Located in the heart of Riyadh's growing aviation district, the design takes inspiration from the fluid dynamics of flight and the sharp, aerodynamic lines of modern aircraft.
+                            </p>
+                            <p>
+                                The core objective was to create a community hub that serves not just as a training facility, but as a landmark of inspiration for future aviators. The structure utilizes a cantilevered roof system mirroring a wing's silhouette, providing expansive shaded areas suitable for the desert climate while creating a dramatic visual impact.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-4 space-y-10">
+                        <div>
+                            <h3 class="text-sm text-white/40 uppercase tracking-wider mb-4">Project Details</h3>
+                            <dl class="space-y-4">
+                                <div>
+                                    <dt class="text-white/30 text-xs uppercase tracking-widest">Location</dt>
+                                    <dd class="text-white text-sm">Riyadh, Saudi Arabia</dd>
+                                </div>
+                                <div>
+                                    <dt class="text-white/30 text-xs uppercase tracking-widest">Role</dt>
+                                    <dd class="text-white text-sm">Lead Architect & Visualization</dd>
+                                </div>
+                                <div>
+                                    <dt class="text-white/30 text-xs uppercase tracking-widest">Software Tools</dt>
+                                    <dd class="text-white text-sm py-1 flex flex-wrap gap-2">
+                                        <span class="bg-white/5 border border-white/10 px-2 py-1 rounded text-[10px]">Revit</span>
+                                        <span class="bg-white/5 border border-white/10 px-2 py-1 rounded text-[10px]">Lumion</span>
+                                        <span class="bg-white/5 border border-white/10 px-2 py-1 rounded text-[10px]">Photoshop</span>
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+                            <p class="text-white/50 text-sm italic mb-4">"A revolutionary approach to aviation community spaces, blending luxury and functionality."</p>
+                            <span class="text-white/30 text-xs">— Design Jury Review</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Features -->
+        <section class="py-20 bg-white/2 px-6 md:px-12 lg:px-20">
+            <div class="max-w-7xl mx-auto space-y-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="font-['Space_Grotesk'] text-3xl font-bold mb-6">Structural Innovation</h3>
+                        <p class="text-white/60 leading-relaxed mb-6">
+                            Integration of sustainable cooling systems and structural steel frameworks allows for large, column-free hangars and transparent social spaces that bridge the gap between pilots and the public.
+                        </p>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden glass aspect-video">
+                        <img src="src/projects/Al Thumama Aviation Club.png" alt="Detail Render" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <section class="py-32 px-6 md:px-12 lg:px-20 border-t border-white/5">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+                <a href="index.html" class="group flex items-center gap-4 text-white/40 hover:text-white transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-white/30 transition-colors">
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-['Space_Grotesk'] text-lg">Main Portfolio</span>
+                </a>
+
+                <a href="college-architecture-arts.html" class="group flex items-end flex-col gap-2 text-right">
+                    <span class="text-xs text-white/30 uppercase tracking-[0.2em]">Next Project</span>
+                    <div class="flex items-center gap-4">
+                        <span class="font-['Space_Grotesk'] text-3xl md:text-5xl font-bold group-hover:italic transition-all">College of Arts</span>
+                        <div class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 md:px-12 lg:px-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+             <img src="src/projects/Logo.png" alt="Omair Logo" class="h-10 w-auto object-contain mb-8" style="filter: invert(1);">
+             <p class="text-white/40 text-sm mb-12 max-w-md text-center">Creating spaces that inspire, designs that resonate, and architecture that stands the test of time.</p>
+             <div class="flex gap-8 mb-12">
+                 <a href="#" class="text-white/40 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                 <a href="#" class="text-white/40 hover:text-white transition-colors"><i data-lucide="behance" class="w-6 h-6"></i></a>
+                 <a href="#" class="text-white/40 hover:text-white transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+             </div>
+             <p class="text-white/20 text-xs uppercase tracking-widest">&copy; 2024 Omair Al-Qahtani. Architecture Portfolio.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script>
+        // Specific animation for this page
+        const { animate, inView, stagger } = Motion;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Header reveal
+            animate("#project-header", { opacity: [0, 1], y: [40, 0] }, { duration: 1, ease: [0.22, 1, 0.36, 1] });
+            
+            // Text reveal on scroll
+            inView("section", ({ target }) => {
+                animate(target, { opacity: [0, 1], y: [30, 0] }, { duration: 0.8, delay: 0.2 });
+            });
+
+            // Initialize icons
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,402 @@
+@import "tailwindcss";
+
+/* Custom CSS Variables */
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #000f26;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --text-muted: rgba(255, 255, 255, 0.4);
+  --accent: #000f26;
+  --neon-glow: 0 0 20px rgba(0, 15, 38, 0.6), 0 0 40px rgba(0, 15, 38, 0.4);
+  --neon-glow-hover:
+    0 0 30px rgba(0, 15, 38, 0.8), 0 0 60px rgba(0, 15, 38, 0.5),
+    0 0 90px rgba(0, 15, 38, 0.3);
+}
+
+/* Smooth Scroll - Handled by Lenis */
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+}
+
+/* Fixed Hero Section with Stacking Effect */
+#hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+#hero.hero-blur {
+  filter: blur(15px) brightness(0.5);
+  transition: filter 0.6s ease;
+}
+
+#about {
+  position: relative;
+  z-index: 10;
+  background-color: #0f0f0f;
+  margin-top: 100vh;
+}
+
+/* Ensure all subsequent sections stack over hero */
+#experience,
+#tools,
+#work,
+footer {
+  position: relative;
+  z-index: 10;
+  background-color: #0f0f0f;
+}
+
+/* Neon Button Styles */
+.neon-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neon-button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #000f26, #001a40, #000f26);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: blur(8px);
+}
+
+.neon-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neon-glow-hover);
+}
+
+.neon-button:hover::before {
+  opacity: 1;
+}
+
+.neon-button-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neon-button-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #ffffff, #f0f0f0, #ffffff);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.neon-button-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+}
+
+/* Project Preview Images */
+.project-preview-image {
+  filter: blur(0px);
+  transform: scale(0.95);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.project-preview-image.active {
+  opacity: 0.15;
+  transform: scale(1);
+}
+
+.project-preview-image img {
+  filter: grayscale(30%);
+  transition: filter 0.4s ease;
+}
+
+.project-preview-image.active img {
+  filter: grayscale(0%);
+}
+
+/* Timeline Styles */
+.timeline-progress {
+  height: 0%;
+  transition: height 0.1s linear;
+  will-change: height;
+}
+
+.experience-dot {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, background-color;
+}
+
+.experience-dot.active {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Ticker Animation */
+.ticker-container {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.ticker-track {
+  animation: ticker-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.ticker-container:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Project Cards */
+.project-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* About Text Gradient Animation */
+.about-description {
+  transition: color 0.3s ease;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+#mobile-menu.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#mobile-menu:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Scroll Indicator */
+#scroll-indicator {
+  animation: fade-in-up 1s ease 2s both;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+
+  to {
+    opacity: 0.6;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* CSS Fallback Animations (when Framer Motion isn't available) */
+.hero-title {
+  animation: hero-title-fade-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s
+    both;
+}
+
+.hero-subtitle {
+  animation: hero-subtitle-fade-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    0.5s both;
+}
+
+@keyframes hero-title-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-subtitle-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll reveal animations for other elements */
+.about-title,
+.about-description,
+.experience-title,
+.experience-item,
+.work-title,
+.project-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-title.animate-in,
+.about-description.animate-in,
+.experience-title.animate-in,
+.experience-item.animate-in,
+.work-title.animate-in,
+.project-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .ticker-track {
+    animation: none;
+  }
+
+  .project-preview-image,
+  .project-card,
+  .neon-button,
+  .neon-button-primary,
+  .experience-dot {
+    transition: none;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .project-preview-image {
+    width: 280px !important;
+    height: 200px !important;
+  }
+
+  .hero-title {
+    font-size: 3.5rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .neon-button,
+  .neon-button-primary {
+    border: 2px solid currentColor;
+  }
+
+  .text-white\/40,
+  .text-white\/50,
+  .text-white\/60,
+  .text-white\/70 {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .neon-button,
+  .neon-button-primary,
+  #mobile-menu,
+  #scroll-indicator,
+  .ticker-container {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .project-preview-image {
+    display: none;
+  }
+}

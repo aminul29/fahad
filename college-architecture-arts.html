@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="College of Architecture and Arts - Educational Campus Design by Omair Al-Qahtani">
+    <meta name="theme-color" content="#0f0f0f">
+    <title>College of Architecture and Arts | Omair Al-Qahtani</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="src/output.css">
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Framer Motion -->
+    <script src="https://unpkg.com/motion@10.16.4/dist/motion.js" defer></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[#0f0f0f] text-white font-['Inter'] overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 lg:px-20 border-b border-white/5 bg-[#0f0f0f]/80 backdrop-blur-md" id="navbar">
+        <div class="flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3" aria-label="Home">
+                <img src="src/projects/Logo.png" alt="Omair Logo" class="h-12 w-auto object-contain" style="filter: invert(1);">
+            </a>
+            <div class="flex items-center gap-8">
+                <a href="index.html#work" class="text-sm text-white/70 hover:text-white transition-colors duration-300">Back to Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="relative pt-32 pb-20 px-6 md:px-12 lg:px-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-12" id="project-header">
+                    <span class="text-sm text-white/40 uppercase tracking-[0.2em] mb-4 block">University Project | 2022</span>
+                    <h1 class="font-['Space_Grotesk'] text-4xl md:text-6xl lg:text-8xl font-bold mb-6 italic leading-none">
+                        College of<br><span class="text-white/20">Architecture & Arts</span>
+                    </h1>
+                </div>
+
+                <div class="aspect-video w-full overflow-hidden rounded-3xl mb-12">
+                    <img src="src/projects/College of Architecture and Arts.png" alt="College of Architecture and Arts Render" class="w-full h-full object-cover">
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                    <div class="lg:col-span-8">
+                        <h2 class="font-['Space_Grotesk'] text-2xl md:text-3xl font-semibold mb-6">Educational Vision</h2>
+                        <div class="space-y-6 text-white/60 leading-relaxed text-lg">
+                            <p>
+                                The College of Architecture and Arts is designed as a living laboratory for creativity. The campus architecture itself serves as a teaching tool, exposing structural elements and utilizing a diverse palette of materials to inspire students daily. 
+                            </p>
+                            <p>
+                                Central to the design is the "Creative Spine"—a multi-level soaring atrium that connects studios, workshops, and galleries. This space encourages accidental meetings and cross-pollination between different artistic disciplines, from industrial design to fine arts.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-4 space-y-10">
+                        <div>
+                            <h3 class="text-sm text-white/40 uppercase tracking-wider mb-4">Project Details</h3>
+                            <dl class="space-y-4">
+                                <div>
+                                    <dt class="text-white/30 text-xs uppercase tracking-widest">Type</dt>
+                                    <dd class="text-white text-sm">Educational Campus</dd>
+                                </div>
+                                <div>
+                                    <dt class="text-white/30 text-xs uppercase tracking-widest">Sustainability</dt>
+                                    <dd class="text-white text-sm">LEED Gold Target</dd>
+                                </div>
+                                <div>
+                                    <dt class="text-white/30 text-xs uppercase tracking-widest">Key Features</dt>
+                                    <dd class="text-white text-sm py-1 flex flex-wrap gap-2">
+                                        <span class="bg-white/5 border border-white/10 px-2 py-1 rounded text-[10px]">Open Studios</span>
+                                        <span class="bg-white/5 border border-white/10 px-2 py-1 rounded text-[10px]">Digital Labs</span>
+                                        <span class="bg-white/5 border border-white/10 px-2 py-1 rounded text-[10px]">Green Roofs</span>
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+                            <p class="text-white/50 text-sm italic mb-4">"A masterclass in spatial organization and educational environment design."</p>
+                            <span class="text-white/30 text-xs">— Academic Excellence Award</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="py-20 bg-white/2 px-6 md:px-12 lg:px-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="md:col-span-2 rounded-2xl overflow-hidden aspect-video">
+                        <img src="src/projects/College of Architecture and Arts.png" alt="Interior View" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden aspect-square md:aspect-auto">
+                        <img src="src/projects/College of Architecture and Arts.png" alt="Detail View" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <section class="py-32 px-6 md:px-12 lg:px-20 border-t border-white/5">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+                <a href="al-thumama-aviation-club.html" class="group flex items-center gap-4 text-white/40 hover:text-white transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-white/30 transition-colors">
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-[10px] uppercase tracking-widest opacity-50">Previous</span>
+                        <span class="font-['Space_Grotesk'] text-lg">Aviation Club</span>
+                    </div>
+                </a>
+
+                <a href="lucid-air.html" class="group flex items-end flex-col gap-2 text-right">
+                    <span class="text-xs text-white/30 uppercase tracking-[0.2em]">Next Project</span>
+                    <div class="flex items-center gap-4">
+                        <span class="font-['Space_Grotesk'] text-3xl md:text-5xl font-bold group-hover:italic transition-all">LucidAir</span>
+                        <div class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 md:px-12 lg:px-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+             <img src="src/projects/Logo.png" alt="Omair Logo" class="h-10 w-auto object-contain mb-8" style="filter: invert(1);">
+             <p class="text-white/40 text-sm mb-12 max-w-md text-center">Creating spaces that inspire, designs that resonate, and architecture that stands the test of time.</p>
+             <div class="flex gap-8 mb-12">
+                 <a href="#" class="text-white/40 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                 <a href="#" class="text-white/40 hover:text-white transition-colors"><i data-lucide="behance" class="w-6 h-6"></i></a>
+                 <a href="#" class="text-white/40 hover:text-white transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+             </div>
+             <p class="text-white/20 text-xs uppercase tracking-widest">&copy; 2024 Omair Al-Qahtani. Architecture Portfolio.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script>
+        const { animate, inView } = Motion;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            animate("#project-header", { opacity: [0, 1], y: [40, 0] }, { duration: 1, ease: [0.22, 1, 0.36, 1] });
+            
+            inView("section", ({ target }) => {
+                animate(target, { opacity: [0, 1], y: [30, 0] }, { duration: 0.8, delay: 0.2 });
+            });
+
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>

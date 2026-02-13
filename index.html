@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio - Creative Designer & Architect">
+    <meta name="theme-color" content="#0f0f0f">
+    <title>Omair Al-Qahtani - Architect</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="src/output.css">
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Framer Motion -->
+    <script src="https://unpkg.com/motion@10.16.4/dist/motion.js"
+        defer></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-[#0f0f0f] text-white font-['Inter'] overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 lg:px-20"
+        id="navbar" aria-label="Main navigation">
+        <div class="flex justify-between items-center">
+            <a href="#hero" class="flex items-center gap-3" aria-label="Home">
+                <!-- Logo Image -->
+                <img src="src/projects/Logo.png" alt="Omair Logo"
+                    class="h-16 w-auto object-contain"
+                    style="filter: invert(1);">
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about"
+                    class="text-sm text-white/70 hover:text-white transition-colors duration-300">About</a>
+                <a href="#experience"
+                    class="text-sm text-white/70 hover:text-white transition-colors duration-300">Experience</a>
+                <a href="#work"
+                    class="text-sm text-white/70 hover:text-white transition-colors duration-300">Work</a>
+                <a href="#contact"
+                    class="text-sm text-white/70 hover:text-white transition-colors duration-300">Contact</a>
+            </div>
+            <button class="md:hidden text-white" id="mobile-menu-btn"
+                aria-label="Toggle mobile menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="fixed inset-0 bg-[#0f0f0f] z-50 hidden" id="mobile-menu"
+            role="dialog" aria-modal="true" aria-label="Mobile navigation">
+            <div class="flex flex-col h-full px-6 py-6">
+                <div class="flex justify-between items-center mb-12">
+                    <span class="sr-only">Omair</span>
+                    <!-- Compact logo for mobile menu -->
+                    <img src="src/projects/Logo.png" alt="Omair Logo"
+                        class="h-7 w-auto object-contain"
+                        style="filter: invert(1);">
+                    <button id="mobile-menu-close"
+                        aria-label="Close mobile menu">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <a href="#about"
+                        class="text-2xl font-['Space_Grotesk'] mobile-nav-link">About</a>
+                    <a href="#experience"
+                        class="text-2xl font-['Space_Grotesk'] mobile-nav-link">Experience</a>
+                    <a href="#work"
+                        class="text-2xl font-['Space_Grotesk'] mobile-nav-link">Work</a>
+                    <a href="#contact"
+                        class="text-2xl font-['Space_Grotesk'] mobile-nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero"
+        class="relative w-full h-screen flex items-center justify-center overflow-hidden"
+        aria-label="Hero">
+        <!-- Project Preview Images Container -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none"
+            id="hero-image-container" aria-hidden="true">
+            <div class="project-preview-image absolute w-[400px] h-[300px] md:w-[500px] md:h-[375px] opacity-0 transition-opacity duration-500"
+                data-index="0" style="top: 15%; left: 10%;">
+                <img src="src/projects/Al Thumama Aviation Club.png"
+                    alt=""
+                    class="w-full h-full object-cover rounded-lg shadow-2xl"
+                    loading="lazy" decoding="async">
+            </div>
+            <div class="project-preview-image absolute w-[350px] h-[250px] md:w-[450px] md:h-[320px] opacity-0 transition-opacity duration-500"
+                data-index="1" style="top: 50%; right: 8%;">
+                <img src="src/projects/College of Architecture and Arts.png"
+                    alt=""
+                    class="w-full h-full object-cover rounded-lg shadow-2xl"
+                    loading="lazy" decoding="async">
+            </div>
+            <div class="project-preview-image absolute w-[380px] h-[280px] md:w-[480px] md:h-[360px] opacity-0 transition-opacity duration-500"
+                data-index="2" style="bottom: 15%; left: 15%;">
+                <img src="src/projects/LucidAir.png"
+                    alt=""
+                    class="w-full h-full object-cover rounded-lg shadow-2xl"
+                    loading="lazy" decoding="async">
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto"
+            id="hero-content">
+            <div class="overflow-hidden mb-4">
+                <h1 class="hero-title font-['Space_Grotesk'] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none"
+                    aria-label="Omair">
+                    OMAIR
+                </h1>
+            </div>
+            <div class="overflow-hidden">
+                <p class="hero-subtitle text-lg sm:text-xl md:text-2xl text-white/60 font-light tracking-wide"
+                    aria-label="Creative Designer & Architect">
+                    Creative Designer & Architect
+                </p>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 opacity-60"
+            id="scroll-indicator" aria-hidden="true">
+            <div
+                class="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
+                <div
+                    class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about"
+        class="relative w-full min-h-screen py-24 md:py-32 px-6 md:px-12 lg:px-20"
+        aria-label="About Me">
+        <div class="max-w-7xl mx-auto">
+            <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                <!-- Left Column - Title -->
+                <div class="lg:sticky lg:top-32">
+                    <span
+                        class="text-sm text-white/40 uppercase tracking-widest mb-4 block">Introduction
+                    </span>
+                    <h2
+                        class="about-title font-['Space_Grotesk'] text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-8">
+                        About Me
+                    </h2>
+                    <div
+                        class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 text-sm text-white/70">
+                        <div>
+                            <span
+                                class="block font-semibold text-white">Address</span>
+                            <span>Riyadh, Saudi Arabia</span>
+                        </div>
+                        <div>
+                            <span
+                                class="block font-semibold text-white">Email</span>
+                            <a href="mailto:Omairalrooq@outlook.com"
+                                class="hover:text-white transition-colors">Omairalrooq@outlook.com</a>
+                        </div>
+                        <div>
+                            <span
+                                class="block font-semibold text-white">Phone</span>
+                            <a href="tel:+966532101058"
+                                class="hover:text-white transition-colors">+966
+                                532101058</a>
+                        </div>
+                        <div>
+                            <span
+                                class="block font-semibold text-white">LinkedIn</span>
+                            <a href="https://linkedin.com" target="_blank"
+                                rel="noopener noreferrer"
+                                class="hover:text-white transition-colors">Omair
+                                Al-Qahtani</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="about-content">
+                    <p class="about-description text-lg md:text-xl text-white/70 leading-relaxed mb-12"
+                        id="about-text">
+                        Final-year Architecture student at King Saud University,
+                        graduating this semester. I possess a strong background
+                        in Real Estate Development, bridging technical design
+                        with investment strategy. My experience includes a
+                        professional tenure at Al-Woasta for Investment and Real
+                        Estate Development, where I contributed to diverse
+                        projects across Riyadh and other regions. Additionally,
+                        I have successfully executed private design commissions,
+                        demonstrating versatility in architectural solutions.
+                        Driven by a commitment to sustainability and urban
+                        innovation, I am eager to apply my expertise to
+                        high-value projects aligned with Saudi Vision 2030.
+                    </p>
+
+                    <!-- Contact Buttons -->
+                    <div class="flex flex-wrap gap-4 mb-12">
+                        <a href="https://linkedin.com" target="_blank"
+                            rel="noopener noreferrer"
+                            class="neon-button group inline-flex items-center gap-2 px-6 py-3 bg-[#000f26] rounded-full text-sm font-medium transition-all duration-300"
+                            aria-label="LinkedIn Profile">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                            <span>Omair Al-Qahtani</span>
+                        </a>
+                        <a href="mailto:Omairalrooq@outlook.com"
+                            class="neon-button group inline-flex items-center gap-2 px-6 py-3 bg-[#000f26] rounded-full text-sm font-medium transition-all duration-300"
+                            aria-label="Send Email">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="tel:+966532101058"
+                            class="neon-button group inline-flex items-center gap-2 px-6 py-3 bg-[#000f26] rounded-full text-sm font-medium transition-all duration-300"
+                            aria-label="Call Phone">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            <span>Phone</span>
+                        </a>
+                    </div>
+
+                    <!-- Resume Download -->
+                    <a href="#" download
+                        class="neon-button-primary group inline-flex items-center gap-3 px-8 py-4 bg-white text-[#0f0f0f] rounded-full text-base font-semibold transition-all duration-300"
+                        aria-label="Download Resume">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience"
+        class="relative w-full min-h-screen py-24 md:py-32 px-6 md:px-12 lg:px-20"
+        aria-label="Work Experience">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+                <!-- Left Column - Sticky Title -->
+                <div class="lg:sticky lg:top-32 lg:h-fit">
+                    <span
+                        class="text-sm text-white/40 uppercase tracking-widest mb-4 block">Career</span>
+                    <h2
+                        class="experience-title font-['Space_Grotesk'] text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+                        Work Experience
+                    </h2>
+                    <p class="text-white/50 text-lg max-w-md">
+                        A journey through my professional growth and the
+                        valuable experiences that shaped my design perspective.
+                    </p>
+                </div>
+
+                <!-- Right Column - Timeline -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-0 top-0 bottom-0 w-px bg-white/10"
+                        aria-hidden="true">
+                        <div class="timeline-progress absolute top-0 left-0 w-full bg-gradient-to-b from-white/60 to-white/20"
+                            id="timeline-line"></div>
+                    </div>
+
+                    <!-- Experience Items -->
+                    <div class="space-y-12 pl-8">
+                        <!-- Experience 1 -->
+                        <div class="experience-item relative" data-index="0">
+                            <div
+                                class="absolute -left-8 top-0 w-4 h-4 rounded-full bg-white/20 border border-white/40 experience-dot">
+                            </div>
+                            <div class="pb-8">
+                                <span
+                                    class="text-sm text-white/40 mb-2 block">2024
+                                    - Present</span>
+                                <h3
+                                    class="font-['Space_Grotesk'] text-xl md:text-2xl font-semibold mb-1">
+                                    Junior Architect</h3>
+                                <p class="text-white/60 text-base mb-4">Design
+                                    Studio Saudi Arabia</p>
+                                <p
+                                    class="text-white/50 text-sm leading-relaxed">
+                                    Collaborating on residential and commercial
+                                    projects, developing conceptual designs, and
+                                    creating detailed architectural drawings
+                                    using AutoCAD and Revit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="experience-item relative" data-index="1">
+                            <div
+                                class="absolute -left-8 top-0 w-4 h-4 rounded-full bg-white/20 border border-white/40 experience-dot">
+                            </div>
+                            <div class="pb-8">
+                                <span
+                                    class="text-sm text-white/40 mb-2 block">2023
+                                    - 2024</span>
+                                <h3
+                                    class="font-['Space_Grotesk'] text-xl md:text-2xl font-semibold mb-1">
+                                    Design Intern</h3>
+                                <p class="text-white/60 text-base mb-4">
+                                    Architectural Vision Ltd.</p>
+                                <p
+                                    class="text-white/50 text-sm leading-relaxed">
+                                    Assisted in 3D modeling and rendering
+                                    projects, created presentation materials,
+                                    and participated in client meetings and site
+                                    visits.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Experience 3 -->
+                        <div class="experience-item relative" data-index="2">
+                            <div
+                                class="absolute -left-8 top-0 w-4 h-4 rounded-full bg-white/20 border border-white/40 experience-dot">
+                            </div>
+                            <div class="pb-8">
+                                <span
+                                    class="text-sm text-white/40 mb-2 block">2022
+                                    - 2023</span>
+                                <h3
+                                    class="font-['Space_Grotesk'] text-xl md:text-2xl font-semibold mb-1">
+                                    Freelance Designer</h3>
+                                <p class="text-white/60 text-base mb-4">
+                                    Self-Employed</p>
+                                <p
+                                    class="text-white/50 text-sm leading-relaxed">
+                                    Completed various interior design and 3D
+                                    visualization projects for clients,
+                                    developing strong client communication and
+                                    project management skills.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Experience 4 -->
+                        <div class="experience-item relative" data-index="3">
+                            <div
+                                class="absolute -left-8 top-0 w-4 h-4 rounded-full bg-white/20 border border-white/40 experience-dot">
+                            </div>
+                            <div>
+                                <span
+                                    class="text-sm text-white/40 mb-2 block">2021
+                                    - 2022</span>
+                                <h3
+                                    class="font-['Space_Grotesk'] text-xl md:text-2xl font-semibold mb-1">
+                                    Student Assistant</h3>
+                                <p class="text-white/60 text-base mb-4">
+                                    University Design Lab</p>
+                                <p
+                                    class="text-white/50 text-sm leading-relaxed">
+                                    Supported faculty with research projects,
+                                    organized design workshops, and mentored
+                                    junior students in design software training.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Ticker Section -->
+    <section id="tools" class="relative w-full py-16 md:py-24 overflow-hidden"
+        aria-label="Tools & Software">
+        <div class="mb-12 px-6 md:px-12 lg:px-20">
+            <span class="text-sm text-white/40 uppercase tracking-widest block">Toolkit</span>
+            <h2
+                class="experience-title font-['Space_Grotesk'] text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 mt-6">
+                Tools & Software
+            </h2>
+        </div>
+
+        <!-- Ticker Container -->
+        <div class="ticker-container relative" aria-hidden="true">
+            <div class="ticker-track flex gap-12" id="ticker-track">
+                <!-- Ticker Items -->
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">AutoCAD</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">SketchUp</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">Lumion</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">Revit</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">Photoshop</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">Illustrator</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">V-Ray</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">3ds
+                        Max</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">InDesign</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">Twinmotion</span>
+                </div>
+
+                <!-- Duplicate for seamless loop -->
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">AutoCAD</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">SketchUp</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">Lumion</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">Revit</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">Photoshop</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">Illustrator</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">V-Ray</span>
+                </div>
+                <div class="ticker-item flex-shrink-0 px-8">
+                    <span
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl lg:text-5xl font-bold text-white/20 hover:text-white/60 transition-colors duration-300 whitespace-nowrap">3ds
+                        Max</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Works Section -->
+    <section id="work"
+        class="relative w-full py-24 md:py-32 px-6 md:px-12 lg:px-20"
+        aria-label="Selected Works">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="mb-16 md:mb-24">
+                <span
+                    class="text-sm text-white/40 uppercase tracking-widest mb-4 block">Portfolio</span>
+                <h2
+                    class="work-title font-['Space_Grotesk'] text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+                    Selected Works
+                </h2>
+                <p class="text-white/50 text-lg max-w-xl">
+                    A curated collection of my best work, showcasing university
+                    projects and personal explorations in design and
+                    architecture.
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
+                id="projects-grid">
+                <!-- Project 1: Al Thumama Aviation Club -->
+                <a href="al-thumama-aviation-club.html" class="block group">
+                    <article
+                        class="project-card group relative overflow-hidden rounded-2xl bg-white/5 h-full"
+                        data-category="University Project">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="src/projects/Al Thumama Aviation Club.png"
+                                alt="Al Thumama Aviation Club - Aviation Architecture Design"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="p-6 md:p-8">
+                            <span
+                                class="text-xs text-white/40 uppercase tracking-wider mb-3 block">University
+                                Project</span>
+                            <h3
+                                class="font-['Space_Grotesk'] text-xl md:text-2xl font-semibold mb-2 group-hover:text-white transition-colors">
+                                Al Thumama Aviation Club</h3>
+                            <p class="text-white/50 text-sm leading-relaxed">
+                                A comprehensive aviation club design integrating modern facilities, 
+                                training spaces, and community areas for aviation enthusiasts and professionals.
+                            </p>
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-white/10 rounded-2xl pointer-events-none group-hover:border-white/20 transition-colors duration-300">
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Project 2: College of Architecture and Arts -->
+                <a href="college-architecture-arts.html" class="block group">
+                    <article
+                        class="project-card group relative overflow-hidden rounded-2xl bg-white/5 h-full"
+                        data-category="University Project">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="src/projects/College of Architecture and Arts.png"
+                                alt="College of Architecture and Arts - Educational Campus Design"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="p-6 md:p-8">
+                            <span
+                                class="text-xs text-white/40 uppercase tracking-wider mb-3 block">University
+                                Project</span>
+                            <h3
+                                class="font-['Space_Grotesk'] text-xl md:text-2xl font-semibold mb-2 group-hover:text-white transition-colors">
+                                College of Architecture and Arts</h3>
+                            <p class="text-white/50 text-sm leading-relaxed">
+                                An innovative educational campus design fostering creativity and collaboration 
+                                through flexible learning spaces and sustainable architecture.
+                            </p>
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-white/10 rounded-2xl pointer-events-none group-hover:border-white/20 transition-colors duration-300">
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Project 3: LucidAir -->
+                <a href="lucid-air.html" class="block group">
+                    <article
+                        class="project-card group relative overflow-hidden rounded-2xl bg-white/5 h-full"
+                        data-category="Personal Project">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="src/projects/LucidAir.png"
+                                alt="LucidAir - Automotive Showroom Design"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="p-6 md:p-8">
+                            <span
+                                class="text-xs text-white/40 uppercase tracking-wider mb-3 block">Personal
+                                Project</span>
+                            <h3
+                                class="font-['Space_Grotesk'] text-xl md:text-2xl font-semibold mb-2 group-hover:text-white transition-colors">
+                                LucidAir</h3>
+                            <p class="text-white/50 text-sm leading-relaxed">
+                                A luxury automotive showroom concept featuring sleek modern aesthetics, 
+                                premium materials, and an immersive brand experience.
+                            </p>
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-white/10 rounded-2xl pointer-events-none group-hover:border-white/20 transition-colors duration-300">
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+            <!-- Future Projects Note -->
+            <div class="mt-16 text-center">
+                <p class="text-white/30 text-sm">
+                    More projects coming soon • Graduation project in progress
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact"
+        class="relative w-full py-24 md:py-32 px-6 md:px-12 lg:px-20 border-t border-white/10"
+        aria-label="Contact">
+        <div class="max-w-7xl mx-auto">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Name/Brand -->
+                <div class="lg:col-span-2">
+                    <h3
+                        class="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold mb-4">
+                        Omair Al-Qahtani</h3>
+                    <p class="text-white/50 max-w-md">
+                        Creating meaningful spaces and visual experiences
+                        through thoughtful design and innovative architecture.
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4
+                        class="text-sm text-white/40 uppercase tracking-wider mb-6">
+                        Contact</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <span class="text-white/70 text-sm">Riyadh, Saudi
+                                Arabia</span>
+                        </li>
+                        <li>
+                            <a href="mailto:Omairalrooq@outlook.com"
+                                class="text-white/70 hover:text-white transition-colors duration-300 text-sm">
+                                Omairalrooq@outlook.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+966532101058"
+                                class="text-white/70 hover:text-white transition-colors duration-300 text-sm">
+                                +966 532 101 058
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div>
+                    <h4
+                        class="text-sm text-white/40 uppercase tracking-wider mb-6">
+                        Connect</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://linkedin.com" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-white/70 hover:text-white transition-colors duration-300 text-sm inline-flex items-center gap-2">
+                                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                                Omair Al-Qahtani
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://behance.net" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-white/70 hover:text-white transition-colors duration-300 text-sm inline-flex items-center gap-2">
+                                <i data-lucide="globe" class="w-4 h-4"></i>
+                                Behance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-white/70 hover:text-white transition-colors duration-300 text-sm inline-flex items-center gap-2">
+                                <i data-lucide="instagram" class="w-4 h-4"></i>
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div
+                class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/30 text-xs">
+                    © 2024 Omair Al-Qahtani. All rights reserved.
+                </p>
+                <p class="text-white/30 text-xs">
+                    Designed & Built with passion
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+
+</html>
