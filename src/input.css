@@ -202,7 +202,7 @@ footer {
 }
 
 .ticker-track {
-  animation: ticker-scroll 30s linear infinite;
+  animation: ticker-scroll 10s linear infinite;
   will-change: transform;
 }
 
