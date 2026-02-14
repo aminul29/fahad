@@ -1,0 +1,89 @@
+{
+    "Create a About page for this homepage with the following info": {
+        "page name": "About Me",
+        "Page Design Language": "Similar to Home Page",
+        "section-1": {
+            "Breadcrumb": "Breadcrumb"
+        },
+        "section-2": {
+            "About me": {
+                "Number of col": 2,
+                "col-1": {
+                    "About me content": {
+                        "content": "Welcome to my personal webpage!
+                        As an interdisciplinary-trained professional, my mission is to contribute to creating a more sustainable, resilient, equitable, and resource-secure world for all.
+                        I am dedicated to advancing systems approaches that acknowledge the complexity and interconnectedness of our global challenges, particularly on issues related to food system transformation, energy transition, integrated water management, disaster risk reduction, planetary health, and climate action.
+                        My work emphasizes inclusive, evidence-based, community-engaged approaches toward improved cross-sectoral collaboration, policy coherence, and Sustainable Development"
+                    },
+                    "button": "Download Bio"
+                },
+                "col-2": {
+                    "About me image": "interdisciplinary research diagram"
+                }
+            }
+        },
+        "section-3": {
+            "section title": "Summary of transferrable skills",
+            "content": {
+                {
+                    "1": {
+                        "title": "Sustainability expert",
+                        "content": "with 15 years of experience developing quantitative scenario analysis tools for supporting evidenced-based water-energy-food system transformation, as evidenced by 85+highly cited publications on case studies based in the United States, Lebanon, Qatar, Turkey, Jordan, Morocco, and Bangladesh, among others."
+                    },
+                    "2": {
+                        "title": "Experienced researcher",
+                        "content": "proficient in analyzing complex data and conducting comprehensive reviews of scientific and grey literature pertaining to integrated policy frameworks and multi-criteria sustainability assessments. Skillful in leveraging insights gained from trade-off analyses to inform evidence-based decision-making processes."
+                    },
+                    "3": {
+                        "title": "Experienced facilitator",
+                        "content": "of multi-stakeholder engagement workshops and capacity-building training activities geared toward catalyzing collective action and coordinated cross-sectoral decision making, with experience in managing and building partnerships across government, civil society, private sector, and academia, demonstrated in Texas, Qatar, and Jordan."
+                    },
+                    "4": {
+                        "title": "Excellent communicator",
+                        "content": "fully fluent in English and Arabic, evidenced by leading publications and workshops in both languages, with 100+ invited technical and non-technical talks in 25+ countries, including a TEDx Talk."
+                    },
+                    "5": {
+                        "title": "Expert project manager and grant writer",
+                        "content": "with exceptional organizational skills and ability to manage complex portfolio of activities, demonstrated by co-leading 12 projects between 2020 to 2025, supported by funders including the U.S. National Science Foundation (NSF), National Institutes of Health (NIH), United Nations Food and Agricultural Organization, Microsoft, and GIZ, amounting to over $ 8 M"
+                    },
+                    "6": {
+                        "title": "Cross-functional collaborator and network builder",
+                        "content": "with experience building strong networks, demonstrated through playing leadership roles in establishing and maintaining 3 national & global networks related to zero hunger solutions (US), sustainable food systems (US-Africa), and soil, land management, and climate change (US-Global)."
+                    }
+                }
+            }
+        },
+        "section-4": {
+            "section title": "Education",
+            "content": {
+                {
+                    "1": "Texas A&M University, College Station, Texas, USA
+                    Aug 2015 – May 2019
+                    Doctor of Philosophy, Water Management and Hydrological Sciences  
+                    Dissertation: Bridging Physical and Social Sciences to Unlock New Potential for Addressing Interconnected Resource Challenges",
+                    "2": "Purdue University, West Lafayette, Indiana, USA
+                    Aug 2010 – Dec 2012
+                    Master of Science in Engineering, Agricultural and Biological Engineering
+                    Thesis: Water, Energy, and Food Nexus: A Basis for Strategic Planning for Natural Resources",   
+                    "3": "American University of Beirut, Beirut, Lebanon
+                    Sep 2006 – Jun 2010
+                    Bachelor of Civil Engineering, with distinction
+                    Research Project: Civil and infrastructural upgrade of an informal setting in Sabra area, Beirut"
+                }
+            }
+        }
+    },
+    "button": {
+        "add buttons": {
+            "button-1": {
+                "button name": "Academic Appointment",
+                "button link": "http://basseldaher.com/academic/"
+            },
+            "button-2": {
+                "button name": "Consulting",
+                "button link": "http://basseldaher.com/consulting/"
+            }
+        },
+        "button position": "place buttons according to the design and content. Position them where they fits best"
+    }
+}
